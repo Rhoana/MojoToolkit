@@ -29,9 +29,9 @@ with h5py.File(paths['hd5'],'r') as hi:
     group = hi[hi.keys()[0]]
     shape = group.shape
     dtype = group.dtype
-    
+
     outfile = Imgo(paths['out'])
-    if dtype is not np.uint8:
+    if np.iinfo(dtype).max is not 255:
         outfile = Sego(paths['out'])
 
     for zi in range(shape[0]):

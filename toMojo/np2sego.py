@@ -9,6 +9,7 @@ import numpy as np
 class Sego:
     def __init__(self, output_dir):
 
+        self.tile_index_w          = 0  
         self.tile_num_pixels_y             = 512
         self.tile_num_pixels_x             = 512
 
